@@ -19,9 +19,6 @@ function togglePlayPause() {
 
 document.addEventListener('DOMContentLoaded', function () {
     const video = document.getElementById('vsl-video')
-    video.play().catch(error => {
-        console.error('Erro ao reproduzir o video.', error)
-    })
 
     video.addEventListener('ended', function () {
         const videoBuyButton = document.getElementById('video-buy-button')
