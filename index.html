@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto de Emagrecimento</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Transforme sua Vida, viva mais FELIZ!</h1>
+        </div>
+    </header>
+    <section class="vsl-section">
+        <div class="container">
+            <h2>Assista o vídeo abaixo para descobrir <mark style="background-color: rgb(241, 64, 64); border-radius: 9px; color: #ffffff;">o segredo!</mark></h2>
+            <div class="video-container">
+                <video id="vsl-video" autoplay>
+                    <source src="https://drive.google.com/uc?id=1xAmanufS60pYvhQOgrWKIrMVuXEb_bpz" type="video/mp4">
+                    Seu navegador não suporta a tag de vídeo.
+                </video>
+                <br><br>
+                <button id="play-pause-button" onclick="togglePlayPause()">Pausar</button>
+            </div>
+            <button class="buy-button pulsating" id="video-buy-button" onclick="buyNow()" style="display: none;">Descubra o SEGREDO</button>
+        </div>
+    </section>
+    <section class="info-section">
+        <div class="container">
+            <h2>Benefícios do Nosso Método Secreto</h2>
+            <p>Descubra como nosso método secreto pode ajudá-lo a alcançar seus objetivos de emagrecimento de forma saudável e eficaz, transformando sua vida com resultados surpreendentes.</p>
+            <button class="buy-button pulsating" id="info-buy-button" onclick="buyNow()" style="display: none;">Descubra o SEGREDO</button>
+        </div>
+    </section>
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>Depoimentos de Clientes</h2>
+            <div class="testimonial">
+                <img src="imgs/feed1.png" alt="Cliente Satisfeito">
+                <p>"Este método mudou minha vida! Perdi 10 kg em 2 meses e me sinto mais saudável do que nunca."</p>
+                <cite>— Mikaela Gontijo</cite>
+            </div>
+            <div class="testimonial">
+                <img src="imgs/feed2.png" alt="Cliente Feliz">
+                <p>"Recomendo para todos que querem uma solução eficaz para perder peso."</p>
+                <cite>— Síntia Rodrigues</cite>
+            </div>
+            <div class="testimonial">
+                <img src="imgs/feed3.png" alt="Cliente Motivado">
+                <p>"Consegui atingir meus objetivos de emagrecimento de forma saudável e sustentável."</p>
+                <cite>— Felipe Bessa</cite>
+            </div>
+            <div class="testimonial">
+                <img src="imgs/feed4.png" alt="Cliente Motivado">
+                <p>"Emagrecer nunca foi tão fácil e agradável. Uma mudança de vida."</p>
+                <cite>— Diego Malaquias</cite>
+            </div>
+            <div class="testimonial">
+                <img src="imgs/feed5.png" alt="Cliente Motivado">
+                <p>"O suporte e a qualidade são excelentes. Estou muito feliz."</p>
+                <cite>— Jéssica Santana</cite>
+            </div>
+            <div class="testimonial">
+                <img src="imgs/feed6.png" alt="Cliente Motivado">
+                <p>"Sinto-me rejuvenescido e confiante. Recomendo a todos!"</p>
+                <cite>— Joelma Santos</cite>
+            </div>
+        </div>
+    </section>
+    <section class="images-section">
+        <div class="container">
+            <h2>Resultados dos Nossos Clientes</h2>
+            <div class="images">
+                <img src="imgs/antesdep1.png" alt="Antes e Depois 1">
+                <img src="imgs/antesdep2.png" alt="Antes e Depois 2">
+                <img src="imgs/antesdep3.png" alt="Antes e Depois 3">
+            </div>
+        </div>
+    </section>
+    <section class="about-section">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <p>Somos uma empresa dedicada a ajudar nossos clientes a atingir seus objetivos de saúde e bem-estar. Nossa estratégia de emagrecimento foi desenvolvido por profissionais especializados e testado cientificamente para garantir os melhores resultados.</p>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <button class="buy-button pulsating" id="footer-buy-button" onclick="buyNow()" style="display: none;">Descubra o SEGREDO</button>
+            <p>&copy; 2024 Emagrecentro | Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('vsl-video');
+            video.muted = true;
+            video.play();
+
+            video.addEventListener('ended', function() {
+                const videoBuyButton = document.getElementById('video-buy-button');
+                const headerBuyButton = document.getElementById('header-buy-button');
+                const infoBuyButton = document.getElementById('info-buy-button');
+                const footerBuyButton = document.getElementById('footer-buy-button');
+                
+                videoBuyButton.style.display = 'inline-block';
+                headerBuyButton.style.display = 'inline-block';
+                infoBuyButton.style.display = 'inline-block';
+                footerBuyButton.style.display = 'inline-block';
+            });
+
+            video.addEventListener('click', function() {
+                if (video.muted) {
+                    video.muted = false;
+                }
+            });
+        })
+    </script>
+    <script src="scripts.js"></script>
+</body>
+</html>

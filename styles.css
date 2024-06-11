@@ -1,0 +1,183 @@
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    padding: 50px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.mark {
+    background-color: rgb(228, 78, 78);
+    border-radius: 6px;
+    padding: 0 5px;
+}
+
+.buy-button {
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 20px 0;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 50px;
+    transition: background 0.3s ease;
+    width: 25%;
+    height: 80px;
+}
+
+.pulsating {
+    animation: pulse 1.5s infinite;
+}
+
+.buy-button:hover {
+    background: #e65500;
+}
+
+.vsl-section, .info-section, .testimonials-section, .images-section, .about-section, footer {
+    padding: 60px 0;
+}
+
+.vsl-section video {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#play-pause-button {
+    height: 50px;
+    width: 22%;
+    border-radius: 12px;
+    background-color: #fa7d2a;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15pt;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+    color: #fff;
+}
+
+#play-pause-button:hover {
+    background-color: #ee471d;
+}
+
+.info-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.testimonials-section .testimonial {
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials-section .testimonial p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.testimonials-section .testimonial cite {
+    display: block;
+    margin-top: 10px;
+    font-style: normal;
+    color: #888;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.images img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.images img:hover {
+    transform: scale(1.05);
+}
+
+.about-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 30px 0;
+}
+
+footer p {
+    margin: 10px 0 0;
+}
+
+footer .buy-button {
+    background: #ff7e5f;
+}
+
+@media (max-width: 768px) {
+    .images img {
+        max-width: 100%;
+    }
+
+    .buy-button {
+        width: 100%;
+    }
+
+    #play-pause-button {
+        width: 100%;
+    }
+}
+
+.testimonial > img {
+    width: 80px;
+    border-radius: 60px;
+}
