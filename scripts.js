@@ -1,6 +1,6 @@
 function buyNow() {
     alert('Redirecionando para a página de compra!');
-    window.location.href = "https://pay.kiwify.com.br/dM5t9c5";
+    window.location.href = "https://pay.kiwify.com.br/OXZo2kX";
 }
 
 function togglePlayPause() {
