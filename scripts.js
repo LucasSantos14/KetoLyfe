@@ -1,6 +1,4 @@
-// document.addEventListener('contextmenu', function (e) {
-//     e.preventDefault()
-// })
+
 
 function buyNow() {
     window.location.href = "https://pay.kiwify.com.br/OXZo2kX"
