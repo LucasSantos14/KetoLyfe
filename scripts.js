@@ -19,26 +19,15 @@ function togglePlayPause() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    const video = document.getElementById('vsl-video');
-    video.muted = true;
-    video.play();
-
-    video.addEventListener('ended', function() {
-        const videoBuyButton = document.getElementById('video-buy-button');
-        const headerBuyButton = document.getElementById('header-buy-button');
-        const infoBuyButton = document.getElementById('info-buy-button');
-        const footerBuyButton = document.getElementById('footer-buy-button');
-        
-        videoBuyButton.style.display = 'inline-block';
-        headerBuyButton.style.display = 'inline-block';
-        infoBuyButton.style.display = 'inline-block';
-        footerBuyButton.style.display = 'inline-block';
-    });
-
-    video.addEventListener('click', function() {
-        if (video.muted) {
-            video.muted = false;
-        }
-    });
-});
+const video = document.getElementById('vsl-video')
+video.addEventListener('ended', function() {
+    const videoBuyButton = document.getElementById('video-buy-button');
+    const headerBuyButton = document.getElementById('header-buy-button');
+    const infoBuyButton = document.getElementById('info-buy-button');
+    const footerBuyButton = document.getElementById('footer-buy-button');
+    
+    videoBuyButton.style.display = 'inline-block';
+    headerBuyButton.style.display = 'inline-block';
+    infoBuyButton.style.display = 'inline-block';
+    footerBuyButton.style.display = 'inline-block';
+})

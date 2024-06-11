@@ -16,10 +16,10 @@
     </header>
     <section class="vsl-section">
         <div class="container">
-            <h2>Assista o vídeo abaixo para descobrir <mark style="background-color: rgb(241, 64, 64); border-radius: 9px; color: #ffffff;">o segredo!</mark></h2>
+            <h2>Assista o vídeo abaixo para descobrir <mark style="background-color: rgb(241, 64, 64); border-radius: 9px; color: #ffffff; padding: 6px;">o segredo!</mark></h2>
             <div class="video-container">
                 <video id="vsl-video" autoplay>
-                    <source src="./VSL.mp4" type="video/mp4">
+                    <source src="./imgs/VSL.mp4" type="video/mp4">
                     Seu navegador não suporta a tag de vídeo.
                 </video>
                 <br><br>
@@ -94,31 +94,7 @@
     </footer>
     <script>
         document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const video = document.getElementById('vsl-video');
-            video.muted = true;
-            video.play();
-
-            video.addEventListener('ended', function() {
-                const videoBuyButton = document.getElementById('video-buy-button');
-                const headerBuyButton = document.getElementById('header-buy-button');
-                const infoBuyButton = document.getElementById('info-buy-button');
-                const footerBuyButton = document.getElementById('footer-buy-button');
-                
-                videoBuyButton.style.display = 'inline-block';
-                headerBuyButton.style.display = 'inline-block';
-                infoBuyButton.style.display = 'inline-block';
-                footerBuyButton.style.display = 'inline-block';
-            });
-
-            video.addEventListener('click', function() {
-                if (video.muted) {
-                    video.muted = false;
-                }
-            });
+            e.preventDefault()
         })
     </script>
     <script src="scripts.js"></script>
