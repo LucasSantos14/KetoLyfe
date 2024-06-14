@@ -1,3 +1,23 @@
+.responsive-iframe-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    width: 100%;
+    max-width: 853px; /* Ajuste conforme necessário */
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.responsive-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -8,6 +28,10 @@
     100% {
         transform: scale(1);
     }
+}
+
+.pulsating {
+    animation: pulse 1.5s infinite;
 }
 
 body {
@@ -56,10 +80,6 @@ header h1 {
     transition: background 0.3s ease;
     width: 25%;
     height: 80px;
-}
-
-.pulsating {
-    animation: pulse 1.5s infinite;
 }
 
 .buy-button:hover {

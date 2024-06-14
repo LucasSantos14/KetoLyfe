@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -16,19 +18,29 @@
     </header>
     <section class="vsl-section">
         <div class="container">
-            <h2>Assista o vídeo abaixo para descobrir <mark style="background-color: rgb(241, 64, 64); border-radius: 9px; color: #ffffff; padding: 6px;">o segredo!</mark></h2>
+            <h2>Assista o vídeo abaixo para descobrir <mark
+                    style="background-color: rgb(241, 64, 64); border-radius: 9px; color: #ffffff; padding: 6px;">o
+                    segredo!</mark></h2>
             <div class="video-container">
-                <iframe id="panda-4ccd3bcd-b1da-4b90-a63e-c62ce7682d86" src="https://player-vz-84485f8b-827.tv.pandavideo.com.br/embed/?v=4ccd3bcd-b1da-4b90-a63e-c62ce7682d86&iosFakeFullscreen=true" style="border:none;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen=true width="853" height="480" fetchpriority="high"></iframe>
+                <div class="responsive-iframe-container">
+                <iframe id="panda-4ccd3bcd-b1da-4b90-a63e-c62ce7682d86"
+                    src="https://player-vz-84485f8b-827.tv.pandavideo.com.br/embed/?v=4ccd3bcd-b1da-4b90-a63e-c62ce7682d86&iosFakeFullscreen=true"
+                    style="border:none;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture"
+                    allowfullscreen=true width="853" height="480" fetchpriority="high"></iframe>
+                </div>
                 <br><br>
+                <button class="buy-button pulsating" id="video-end-button" onclick="buyNow()"
+                    style="display: none;">Descubra o SEGREDO</button>
             </div>
-            <button class="buy-button pulsating" id="video-buy-button" onclick="buyNow()" style="display: none;">Descubra o SEGREDO</button>
         </div>
     </section>
     <section class="info-section">
         <div class="container">
             <h2>Benefícios do Nosso Método Secreto</h2>
-            <p>Descubra como nosso método secreto pode ajudá-lo a alcançar seus objetivos de emagrecimento de forma saudável e eficaz, transformando sua vida com resultados surpreendentes.</p>
-            <button class="buy-button pulsating" id="info-buy-button" onclick="buyNow()" style="display: none;">Descubra o SEGREDO</button>
+            <p>Descubra como nosso método secreto pode ajudá-lo a alcançar seus objetivos de emagrecimento de forma
+                saudável e eficaz, transformando sua vida com resultados surpreendentes.</p>
+            <button class="buy-button pulsating" id="info-buy-button" onclick="buyNow()" style="display: none;">Descubra
+                o SEGREDO</button>
         </div>
     </section>
     <section class="testimonials-section">
@@ -79,15 +91,30 @@
     <section class="about-section">
         <div class="container">
             <h2>Sobre Nós</h2>
-            <p>Somos uma empresa dedicada a ajudar nossos clientes a atingir seus objetivos de saúde e bem-estar. Nossa estratégia de emagrecimento foi desenvolvido por profissionais especializados e testado cientificamente para garantir os melhores resultados.</p>
+            <p>Somos uma empresa dedicada a ajudar nossos clientes a atingir seus objetivos de saúde e bem-estar. Nossa
+                estratégia de emagrecimento foi desenvolvido por profissionais especializados e testado cientificamente
+                para garantir os melhores resultados.</p>
         </div>
     </section>
     <footer>
         <div class="container">
-            <button class="buy-button pulsating" id="footer-buy-button" onclick="buyNow()" style="display: none;">Descubra o SEGREDO</button>
+            <button class="buy-button pulsating" id="footer-buy-button" onclick="buyNow()"
+                style="display: none;">Descubra o SEGREDO</button>
             <p>&copy; 2024 Emagrecentro | Todos os direitos reservados.</p>
         </div>
     </footer>
-    <script src="scripts.js"></script>
+    <script>
+        function buyNow() {
+            window.location.href = "https://pay.kiwify.com.br/OXZo2kX"
+        }
+
+        const video = document.getElementById('panda-4ccd3bcd-b1da-4b90-a63e-c62ce7682d86');
+        const endButton = document.getElementById('video-end-button');
+
+        video.addEventListener('ended', function () {
+            endButton.style.display = 'block';
+        });
+    </script>
 </body>
+
 </html>
